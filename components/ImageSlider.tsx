@@ -42,7 +42,7 @@ export default function ImageSlider() {
       <div className="slider-text">
         <h1 className="club-title">MUICT AI Club</h1>
         <p className="club-subtitle">Sharing inspiration and technology updates.</p>
-        <a href="/news" className="slider-button">Explore more</a>
+        <Link href="/news" className="slider-button">Explore more</Link>
     </div>
     </div>
   );
