@@ -7,11 +7,14 @@ export default function Navbar() {
     <nav className="navbar justify-center">
       <div className="navbar-content">
         <div className="navbar-left">
-          <Image src="/muict-ai-club/logo.png" alt="Logo" width={40} height={40} />
-          <span className="navbar-logo-text">MUICT AI Club</span>
+          <Link href="/" className="navbar-logo-link">
+            <div className="navbar-logo">
+              <Image src="/muict-ai-club/logo.png" alt="Logo" width={40} height={40} />
+              <span className="navbar-logo-text">MUICT AI Club</span>
+            </div>
+          </Link>
         </div>
         <div className="navbar-menu text">
-          <Link href="/" className='navbar-menu-link'>HOME</Link>
           <Link href="/news" className='navbar-menu-link'>NEWS</Link>
           <Link href="/OurTeam" className='navbar-menu-link'>OUR TEAM</Link>
         </div>

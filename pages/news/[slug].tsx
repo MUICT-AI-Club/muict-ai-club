@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('content/news');
+  const files = fs.readdirSync('content/news').filter(file => file.endsWith('.md'));
   const paths = files.map((filename) => ({ params: { slug: filename.replace('.md', '') } }));
   return { paths, fallback: false };
 }
@@ -40,7 +40,10 @@ export default function NewsDetail({ title, img, content, date }: any) {
         <h1 className="news-detail-title">{title}</h1>
         <div className="news-detail-date">{date}</div>
         <Image src={img} alt={title} width={800} height={400} className="news-detail-image" />
-        <div className="news-detail-content" dangerouslySetInnerHTML={{ __html: content }} />
+        <div
+          className="news-detail-content"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </div>
       <Footer />
     </>

@@ -44,8 +44,8 @@ export default function OurTeam({ groupedByBatch }: any) {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={150}
-                      height={150}
+                      width={160}
+                      height={200}
                       className="team-image"
                     />
                   </div>
